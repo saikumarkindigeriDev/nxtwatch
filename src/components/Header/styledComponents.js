@@ -18,7 +18,7 @@ export const NavbarHeader = styled.nav`
   }
 `
 
-export const HeaderLogo = styled.div`
+export const HeaderLogo = styled.img`
   width: 80px;
   height: 30px;
   @media screen and (min-width: 768px) {
@@ -47,6 +47,7 @@ export const LogoutButton = styled.button`
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
+
   background-color: ${props => props.bgColor};
   color: ${props => props.color};
   border-color: ${props => props.color};

@@ -22,7 +22,7 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class VideoDetailView extends Component {
+class VideoDetailsView extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
     videoDetails: [],
@@ -55,7 +55,7 @@ class VideoDetailView extends Component {
     const {id} = params
     const jwtToken = Cookies.get('jwt_token')
 
-    const url = `https://apis.ccbp.in/vidoes/${id}`
+    const url = `https://apis.ccbp.in/videos/${id}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -76,7 +76,7 @@ class VideoDetailView extends Component {
     }
   }
 
-  onClickLiked = () => {
+  clickLiked = () => {
     this.setState(prevState => ({
       isLiked: !prevState.isLiked,
       isDisLiked: false,
@@ -102,8 +102,8 @@ class VideoDetailView extends Component {
     return (
       <PlayVideoView
         videoDetails={videoDetails}
+        clickLiked={this.clickLiked}
         clickDisLiked={this.clickDisLiked}
-        clickLiked={this.onClickLiked}
         clickSaved={this.clickSaved}
         isLiked={isLiked}
         isDisLiked={isDisLiked}
@@ -117,7 +117,7 @@ class VideoDetailView extends Component {
 
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
-  renderVideoDetailsView = () => {
+  renderVideoDetailView = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
@@ -147,7 +147,7 @@ class VideoDetailView extends Component {
                 data-testid="videoItemDetails"
                 bgColor={bgColor}
               >
-                {this.renderVideoDetailsView()}
+                {this.renderVideoDetailView()}
               </VideoDetailViewContainer>
             </>
           )
@@ -157,4 +157,4 @@ class VideoDetailView extends Component {
   }
 }
 
-export default VideoDetailView
+export default VideoDetailsView

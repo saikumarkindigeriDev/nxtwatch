@@ -17,7 +17,7 @@ class App extends Component {
   state = {
     savedVideos: [],
     isDarkTheme: false,
-    activeTab: 'HOME',
+    activeTab: 'Home',
   }
 
   changeTab = tab => {
@@ -68,7 +68,9 @@ class App extends Component {
           <Route exact path="/login" component={LoginForm} />
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute
-            exact path="/videos/:id" component={VideoDetailsView}
+            exact
+            path="/videos/:id"
+            component={VideoDetailsView}
           />
           <ProtectedRoute exact path="/trending" component={TrendingVideos} />
           <ProtectedRoute exact path="/gaming" component={GamingVideos} />

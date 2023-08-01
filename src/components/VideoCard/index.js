@@ -29,7 +29,7 @@ const VideoCard = props => {
     <ThemeAndVideoContext.Consumer>
       {value => {
         const {isDarkTheme} = value
-        const textColor = isDarkTheme ? '#F9F9F9' : '#231f20'
+        const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
 
         return (
           <ItemLink to={`/videos/${id}`} className="link">

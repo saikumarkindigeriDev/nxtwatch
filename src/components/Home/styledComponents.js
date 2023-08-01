@@ -77,7 +77,7 @@ export const SearchIconContainer = styled.button`
   justify-content: center;
   align-items: center;
   background-color: #909090;
-  width: 70%;
+  width: 25%;
   border: none;
 `
 

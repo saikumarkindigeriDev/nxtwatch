@@ -26,14 +26,14 @@ import {
 } from './styledComponents'
 
 const PlayVideoView = props => {
-  const {videoDetails, isLiked, isDisLiked, clickLiked, clickDistLiked} = props
+  const {videoDetails, isLiked, isDisLiked, clickLiked, clickDisLiked} = props
 
   const onClickLike = () => {
     clickLiked()
   }
 
   const onClickDislike = () => {
-    clickDistLiked()
+    clickDisLiked()
   }
 
   return (

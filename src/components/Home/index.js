@@ -67,7 +67,7 @@ class Home extends Component {
         thumbnailUrl: eachVideo.thumbnail_url,
         viewCount: eachVideo.view_count,
         publishedAt: eachVideo.published_at,
-        name: eachVideo.chanel.name,
+        name: eachVideo.channel.name,
         profileImageUrl: eachVideo.channel.profile_image_url,
       }))
       this.setState({
@@ -97,7 +97,7 @@ class Home extends Component {
 
   renderLoadingView = () => (
     <LoaderContainer data-testid="loader">
-      <Loader type="threeDots" color="#0b69ff" height="50" width="50" />
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </LoaderContainer>
   )
 

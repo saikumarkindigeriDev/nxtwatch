@@ -55,7 +55,7 @@ class NavigationBar extends Component {
                 <NavLink to="/">
                   <NavLinkContainer
                     key="home"
-                    bgColor={activeTab === 'Home' ? activeTab : 'none'}
+                    bgColor={activeTab === 'Home' ? activeTabBg : 'none'}
                     onClick={onClickTabHome}
                   >
                     <AiFillHome
@@ -84,7 +84,7 @@ class NavigationBar extends Component {
                   <NavLinkContainer
                     key="gaming"
                     bgColor={activeTab === 'Gaming' ? activeTabBg : 'none'}
-                    onClick={onClickTabTrending}
+                    onClick={onClickTabGaming}
                   >
                     <SiYoutubegaming
                       size={30}
@@ -98,7 +98,7 @@ class NavigationBar extends Component {
                   <NavLinkContainer
                     key="saved"
                     bgColor={activeTab === 'Saved' ? activeTabBg : 'none'}
-                    onClick={onClickTabTrending}
+                    onClick={onClickTabSaved}
                   >
                     <CgPlayListAdd
                       size={30}

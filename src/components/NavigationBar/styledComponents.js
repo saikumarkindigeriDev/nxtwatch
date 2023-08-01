@@ -15,11 +15,11 @@ export const NavigationLgContainer = styled.div`
   position: fixed;
   top: 60px;
   background-color: ${props => props.bgColor};
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `
-export const NavOptions = styled.div`
+export const NavOptions = styled.ul`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -55,7 +55,7 @@ export const ContactInfo = styled.div`
 
 export const ContactHeading = styled.p`
   font-family: 'Roboto';
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: ${props => props.color};
 `
@@ -68,15 +68,17 @@ export const ContactIcons = styled.div`
 export const ContactImage = styled.img`
   height: 25px;
   width: 25px;
+  border-radius: 50px;
+  margin-right: 10px;
 `
 
 export const ContactNote = styled.p`
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 14px;
   color: ${props => props.color};
 `
 
-export const NavigationSmallContainer = styled.div` 
+export const NavigationSmallContainer = styled.nav` 
    display:flex;
    width:100%;
    height:60px;

@@ -17,7 +17,7 @@ import {
 import './index.css'
 
 const HomeVideoCard = props => {
-  const {videos} = props
+  const {video} = props
   const {
     id,
     title,
@@ -27,7 +27,7 @@ const HomeVideoCard = props => {
     publishedAt,
     name,
     profileImageUrl,
-  } = videos
+  } = video
 
   return (
     <ThemeAndVideoContext.Consumer>
