@@ -28,12 +28,16 @@ import {
 const Header = props => (
   <ThemeAndVideoContext.Consumer>
     {value => {
-      const {isDarkTheme, toggleTheme} = value
+      const {isDarkTheme, toggleTheme, changeTab} = value
       const color = isDarkTheme ? '#ffffff' : '#00306e'
       const bgColor = isDarkTheme ? '#231f20' : '#f1f5f9'
 
       const onChangeTheme = () => {
         toggleTheme()
+      }
+
+      const onClickIcon = () => {
+        changeTab('Home')
       }
 
       const onClickLogout = () => {
@@ -52,6 +56,7 @@ const Header = props => (
                   : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
               }
               alt="website logo"
+              onClick={onClickIcon}
             />
           </LogoLink>
           <ActionContainer>
